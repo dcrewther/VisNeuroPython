@@ -1,0 +1,1126 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+This experiment was created using PsychoPy2 Experiment Builder (v1.73.02), Thu Apr 25 21:42:38 2013
+If you publish work using this script please cite the relevant PsychoPy publications
+  Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
+  Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
+"""
+
+from __future__ import division  # so that 1/3=0.333 instead of 1/3=0
+from psychopy import visual, core, data, event, logging, gui
+from psychopy.constants import *  # things like STARTED, FINISHED
+import numpy as np  # whole numpy lib is available, prepend 'np.'
+from numpy import sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, rad2deg, linspace, asarray
+from numpy.random import random, randint, normal, shuffle
+import os  # handy system and path functions
+
+# Store info about the experiment session
+expName = 'numberCounting'  # from the Builder filename that created this script
+expInfo = {'participant':'', 'session':'001'}
+dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
+if dlg.OK == False: core.quit()  # user pressed cancel
+expInfo['date'] = data.getDateStr()  # add a simple timestamp
+expInfo['expName'] = expName
+
+# Setup files for saving
+if not os.path.isdir('data'):
+    os.makedirs('data')  # if this fails (e.g. permissions) we will get error
+filename = 'data' + os.path.sep + '%s_%s' %(expInfo['participant'], expInfo['date'])
+logFile = logging.LogFile(filename+'.log', level=logging.EXP)
+logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a file
+
+# An ExperimentHandler isn't essential but helps with data saving
+thisExp = data.ExperimentHandler(name=expName, version='',
+    extraInfo=expInfo, runtimeInfo=None,
+    originPath=None,
+    savePickle=True, saveWideText=True,
+    dataFileName=filename)
+
+# Setup the Window
+win = visual.Window(size=(1440, 900), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
+    monitor='testMonitor', color=[0,0,0], colorSpace='rgb')
+
+# Initialize components for Routine "Start"
+StartClock = core.Clock()
+text = visual.TextStim(win=win, ori=0, name='text',
+    text="We're going to practice \n     counting to 10\n\n    Press 's' to start",
+    font='Arial',
+    pos=[0, 0], height=.1, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
+    depth=0.0)
+
+# Initialize components for Routine "blank"
+blankClock = core.Clock()
+text_6 = visual.TextStim(win=win, ori=0, name='text_6',
+    text=None,
+    font='Arial',
+    pos=[0, 0], height=0.1, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
+    depth=0.0)
+
+# Initialize components for Routine "trial"
+trialClock = core.Clock()
+text_2 = visual.TextStim(win=win, ori=0, name='text_2',
+    text='1',
+    font='Arial',
+    pos=[0, 0], height=2, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
+    depth=-1.0)
+
+# Initialize components for Routine "t2"
+t2Clock = core.Clock()
+text_3 = visual.TextStim(win=win, ori=0, name='text_3',
+    text='2',
+    font='Arial',
+    pos=[0, 0], height=2, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
+    depth=-1.0)
+
+# Initialize components for Routine "t3"
+t3Clock = core.Clock()
+text_4 = visual.TextStim(win=win, ori=0, name='text_4',
+    text='3',
+    font='Arial',
+    pos=[0, 0], height=2, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
+    depth=-1.0)
+
+# Initialize components for Routine "t4"
+t4Clock = core.Clock()
+text_5 = visual.TextStim(win=win, ori=0, name='text_5',
+    text='4',
+    font='Arial',
+    pos=[0, 0], height=2, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
+    depth=-1.0)
+
+# Initialize components for Routine "t5"
+t5Clock = core.Clock()
+text_7 = visual.TextStim(win=win, ori=0, name='text_7',
+    text='5',
+    font='Arial',
+    pos=[0, 0], height=2, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
+    depth=-1.0)
+
+# Initialize components for Routine "t6"
+t6Clock = core.Clock()
+text_8 = visual.TextStim(win=win, ori=0, name='text_8',
+    text='6',
+    font='Arial',
+    pos=[0, 0], height=2, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
+    depth=-1.0)
+
+# Initialize components for Routine "t7"
+t7Clock = core.Clock()
+text_9 = visual.TextStim(win=win, ori=0, name='text_9',
+    text='7',
+    font='Arial',
+    pos=[0, 0], height=2, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
+    depth=-1.0)
+
+# Initialize components for Routine "t8"
+t8Clock = core.Clock()
+text_10 = visual.TextStim(win=win, ori=0, name='text_10',
+    text='8',
+    font='Arial',
+    pos=[0, 0], height=2, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
+    depth=-1.0)
+
+# Initialize components for Routine "t9"
+t9Clock = core.Clock()
+text_11 = visual.TextStim(win=win, ori=0, name='text_11',
+    text='9',
+    font='Arial',
+    pos=[0, 0], height=2, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
+    depth=-1.0)
+
+# Initialize components for Routine "blank2_2"
+blank2_2Clock = core.Clock()
+
+# Initialize components for Routine "t10"
+t10Clock = core.Clock()
+text_12 = visual.TextStim(win=win, ori=0, name='text_12',
+    text='10',
+    font='Arial',
+    pos=[0, 0], height=2, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
+    depth=0.0)
+
+# Initialize components for Routine "finish"
+finishClock = core.Clock()
+text_13 = visual.TextStim(win=win, ori=0, name='text_13',
+    text='Well Done!!\nYou have earned 10 beers!!\n\nnext lesson counting backwards : )',
+    font='Arial',
+    pos=[0, 0], height=0.2, wrapWidth=None,
+    color='white', colorSpace='rgb', opacity=1,
+    depth=0.0)
+
+# Create some handy timers
+globalClock = core.Clock()  # to track the time since experiment started
+routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
+
+#------Prepare to start Routine"Start"-------
+t = 0
+StartClock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+key_resp = event.BuilderKeyResponse()  # create an object of type KeyResponse
+key_resp.status = NOT_STARTED
+# keep track of which components have finished
+StartComponents = []
+StartComponents.append(text)
+StartComponents.append(key_resp)
+for thisComponent in StartComponents:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "Start"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = StartClock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text* updates
+    if t >= 0.0 and text.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text.tStart = t  # underestimates by a little under one frame
+        text.frameNStart = frameN  # exact frame index
+        text.setAutoDraw(True)
+    
+    # *key_resp* updates
+    if t >= 0.0 and key_resp.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        key_resp.tStart = t  # underestimates by a little under one frame
+        key_resp.frameNStart = frameN  # exact frame index
+        key_resp.status = STARTED
+        # keyboard checking is just starting
+        key_resp.clock.reset()  # now t=0
+        event.clearEvents()
+    if key_resp.status == STARTED:  # only update if being drawn
+        theseKeys = event.getKeys(keyList=['s'])
+        if len(theseKeys) > 0:  # at least one key was pressed
+            key_resp.keys = theseKeys[-1]  # just the last key pressed
+            key_resp.rt = key_resp.clock.getTime()
+            # abort routine on response
+            continueRoutine = False
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in StartComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "Start"-------
+for thisComponent in StartComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+#------Prepare to start Routine"blank"-------
+t = 0
+blankClock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+key_resp_6 = event.BuilderKeyResponse()  # create an object of type KeyResponse
+key_resp_6.status = NOT_STARTED
+# keep track of which components have finished
+blankComponents = []
+blankComponents.append(text_6)
+blankComponents.append(key_resp_6)
+for thisComponent in blankComponents:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "blank"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = blankClock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text_6* updates
+    if t >= 0.0 and text_6.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_6.tStart = t  # underestimates by a little under one frame
+        text_6.frameNStart = frameN  # exact frame index
+        text_6.setAutoDraw(True)
+    
+    # *key_resp_6* updates
+    if t >= 0.0 and key_resp_6.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        key_resp_6.tStart = t  # underestimates by a little under one frame
+        key_resp_6.frameNStart = frameN  # exact frame index
+        key_resp_6.status = STARTED
+        # keyboard checking is just starting
+        key_resp_6.clock.reset()  # now t=0
+        event.clearEvents()
+    if key_resp_6.status == STARTED:  # only update if being drawn
+        theseKeys = event.getKeys(keyList=['1'])
+        if len(theseKeys) > 0:  # at least one key was pressed
+            key_resp_6.keys = theseKeys[-1]  # just the last key pressed
+            key_resp_6.rt = key_resp_6.clock.getTime()
+            # abort routine on response
+            continueRoutine = False
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in blankComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "blank"-------
+for thisComponent in blankComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+#------Prepare to start Routine"trial"-------
+t = 0
+trialClock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+key_resp_2 = event.BuilderKeyResponse()  # create an object of type KeyResponse
+key_resp_2.status = NOT_STARTED
+# keep track of which components have finished
+trialComponents = []
+trialComponents.append(key_resp_2)
+trialComponents.append(text_2)
+for thisComponent in trialComponents:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "trial"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = trialClock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_2* updates
+    if t >= 0.0 and key_resp_2.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        key_resp_2.tStart = t  # underestimates by a little under one frame
+        key_resp_2.frameNStart = frameN  # exact frame index
+        key_resp_2.status = STARTED
+        # keyboard checking is just starting
+        key_resp_2.clock.reset()  # now t=0
+        event.clearEvents()
+    if key_resp_2.status == STARTED:  # only update if being drawn
+        theseKeys = event.getKeys(keyList=['2'])
+        if len(theseKeys) > 0:  # at least one key was pressed
+            key_resp_2.keys = theseKeys[-1]  # just the last key pressed
+            key_resp_2.rt = key_resp_2.clock.getTime()
+            # abort routine on response
+            continueRoutine = False
+    
+    # *text_2* updates
+    if (key_resp_2) and text_2.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_2.tStart = t  # underestimates by a little under one frame
+        text_2.frameNStart = frameN  # exact frame index
+        text_2.setAutoDraw(True)
+    elif text_2.status == STARTED and t >= (text_2.tStart + 2):
+        text_2.setAutoDraw(False)
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in trialComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "trial"-------
+for thisComponent in trialComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+#------Prepare to start Routine"t2"-------
+t = 0
+t2Clock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+key_resp_3 = event.BuilderKeyResponse()  # create an object of type KeyResponse
+key_resp_3.status = NOT_STARTED
+# keep track of which components have finished
+t2Components = []
+t2Components.append(key_resp_3)
+t2Components.append(text_3)
+for thisComponent in t2Components:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "t2"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = t2Clock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_3* updates
+    if t >= 0.0 and key_resp_3.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        key_resp_3.tStart = t  # underestimates by a little under one frame
+        key_resp_3.frameNStart = frameN  # exact frame index
+        key_resp_3.status = STARTED
+        # keyboard checking is just starting
+        key_resp_3.clock.reset()  # now t=0
+        event.clearEvents()
+    if key_resp_3.status == STARTED:  # only update if being drawn
+        theseKeys = event.getKeys(keyList=['3'])
+        if len(theseKeys) > 0:  # at least one key was pressed
+            key_resp_3.keys = theseKeys[-1]  # just the last key pressed
+            key_resp_3.rt = key_resp_3.clock.getTime()
+            # abort routine on response
+            continueRoutine = False
+    
+    # *text_3* updates
+    if (key_resp_3) and text_3.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_3.tStart = t  # underestimates by a little under one frame
+        text_3.frameNStart = frameN  # exact frame index
+        text_3.setAutoDraw(True)
+    elif text_3.status == STARTED and t >= (text_3.tStart + 2):
+        text_3.setAutoDraw(False)
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in t2Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "t2"-------
+for thisComponent in t2Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+#------Prepare to start Routine"t3"-------
+t = 0
+t3Clock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+key_resp_4 = event.BuilderKeyResponse()  # create an object of type KeyResponse
+key_resp_4.status = NOT_STARTED
+# keep track of which components have finished
+t3Components = []
+t3Components.append(key_resp_4)
+t3Components.append(text_4)
+for thisComponent in t3Components:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "t3"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = t3Clock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_4* updates
+    if t >= 0.0 and key_resp_4.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        key_resp_4.tStart = t  # underestimates by a little under one frame
+        key_resp_4.frameNStart = frameN  # exact frame index
+        key_resp_4.status = STARTED
+        # keyboard checking is just starting
+        key_resp_4.clock.reset()  # now t=0
+        event.clearEvents()
+    if key_resp_4.status == STARTED:  # only update if being drawn
+        theseKeys = event.getKeys(keyList=['4'])
+        if len(theseKeys) > 0:  # at least one key was pressed
+            key_resp_4.keys = theseKeys[-1]  # just the last key pressed
+            key_resp_4.rt = key_resp_4.clock.getTime()
+            # abort routine on response
+            continueRoutine = False
+    
+    # *text_4* updates
+    if t >= 0.0 and text_4.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_4.tStart = t  # underestimates by a little under one frame
+        text_4.frameNStart = frameN  # exact frame index
+        text_4.setAutoDraw(True)
+    elif text_4.status == STARTED and t >= (0.0 + 2):
+        text_4.setAutoDraw(False)
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in t3Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "t3"-------
+for thisComponent in t3Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+#------Prepare to start Routine"t4"-------
+t = 0
+t4Clock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+key_resp_5 = event.BuilderKeyResponse()  # create an object of type KeyResponse
+key_resp_5.status = NOT_STARTED
+# keep track of which components have finished
+t4Components = []
+t4Components.append(key_resp_5)
+t4Components.append(text_5)
+for thisComponent in t4Components:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "t4"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = t4Clock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_5* updates
+    if t >= 0.0 and key_resp_5.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        key_resp_5.tStart = t  # underestimates by a little under one frame
+        key_resp_5.frameNStart = frameN  # exact frame index
+        key_resp_5.status = STARTED
+        # keyboard checking is just starting
+        key_resp_5.clock.reset()  # now t=0
+        event.clearEvents()
+    if key_resp_5.status == STARTED:  # only update if being drawn
+        theseKeys = event.getKeys(keyList=['5'])
+        if len(theseKeys) > 0:  # at least one key was pressed
+            key_resp_5.keys = theseKeys[-1]  # just the last key pressed
+            key_resp_5.rt = key_resp_5.clock.getTime()
+            # abort routine on response
+            continueRoutine = False
+    
+    # *text_5* updates
+    if t >= 0.0 and text_5.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_5.tStart = t  # underestimates by a little under one frame
+        text_5.frameNStart = frameN  # exact frame index
+        text_5.setAutoDraw(True)
+    elif text_5.status == STARTED and t >= (0.0 + 2):
+        text_5.setAutoDraw(False)
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in t4Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "t4"-------
+for thisComponent in t4Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+#------Prepare to start Routine"t5"-------
+t = 0
+t5Clock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+key_resp_7 = event.BuilderKeyResponse()  # create an object of type KeyResponse
+key_resp_7.status = NOT_STARTED
+# keep track of which components have finished
+t5Components = []
+t5Components.append(key_resp_7)
+t5Components.append(text_7)
+for thisComponent in t5Components:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "t5"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = t5Clock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_7* updates
+    if t >= 0.0 and key_resp_7.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        key_resp_7.tStart = t  # underestimates by a little under one frame
+        key_resp_7.frameNStart = frameN  # exact frame index
+        key_resp_7.status = STARTED
+        # keyboard checking is just starting
+        key_resp_7.clock.reset()  # now t=0
+        event.clearEvents()
+    if key_resp_7.status == STARTED:  # only update if being drawn
+        theseKeys = event.getKeys(keyList=['6'])
+        if len(theseKeys) > 0:  # at least one key was pressed
+            key_resp_7.keys = theseKeys[-1]  # just the last key pressed
+            key_resp_7.rt = key_resp_7.clock.getTime()
+            # abort routine on response
+            continueRoutine = False
+    
+    # *text_7* updates
+    if t >= 0.0 and text_7.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_7.tStart = t  # underestimates by a little under one frame
+        text_7.frameNStart = frameN  # exact frame index
+        text_7.setAutoDraw(True)
+    elif text_7.status == STARTED and t >= (0.0 + 2):
+        text_7.setAutoDraw(False)
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in t5Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "t5"-------
+for thisComponent in t5Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+#------Prepare to start Routine"t6"-------
+t = 0
+t6Clock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+key_resp_8 = event.BuilderKeyResponse()  # create an object of type KeyResponse
+key_resp_8.status = NOT_STARTED
+# keep track of which components have finished
+t6Components = []
+t6Components.append(key_resp_8)
+t6Components.append(text_8)
+for thisComponent in t6Components:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "t6"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = t6Clock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_8* updates
+    if t >= 0.0 and key_resp_8.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        key_resp_8.tStart = t  # underestimates by a little under one frame
+        key_resp_8.frameNStart = frameN  # exact frame index
+        key_resp_8.status = STARTED
+        # keyboard checking is just starting
+        key_resp_8.clock.reset()  # now t=0
+        event.clearEvents()
+    if key_resp_8.status == STARTED:  # only update if being drawn
+        theseKeys = event.getKeys(keyList=['7'])
+        if len(theseKeys) > 0:  # at least one key was pressed
+            key_resp_8.keys = theseKeys[-1]  # just the last key pressed
+            key_resp_8.rt = key_resp_8.clock.getTime()
+            # abort routine on response
+            continueRoutine = False
+    
+    # *text_8* updates
+    if t >= 0.0 and text_8.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_8.tStart = t  # underestimates by a little under one frame
+        text_8.frameNStart = frameN  # exact frame index
+        text_8.setAutoDraw(True)
+    elif text_8.status == STARTED and t >= (0.0 + 2):
+        text_8.setAutoDraw(False)
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in t6Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "t6"-------
+for thisComponent in t6Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+#------Prepare to start Routine"t7"-------
+t = 0
+t7Clock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+key_resp_9 = event.BuilderKeyResponse()  # create an object of type KeyResponse
+key_resp_9.status = NOT_STARTED
+# keep track of which components have finished
+t7Components = []
+t7Components.append(key_resp_9)
+t7Components.append(text_9)
+for thisComponent in t7Components:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "t7"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = t7Clock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_9* updates
+    if t >= 0.0 and key_resp_9.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        key_resp_9.tStart = t  # underestimates by a little under one frame
+        key_resp_9.frameNStart = frameN  # exact frame index
+        key_resp_9.status = STARTED
+        # keyboard checking is just starting
+        key_resp_9.clock.reset()  # now t=0
+        event.clearEvents()
+    if key_resp_9.status == STARTED:  # only update if being drawn
+        theseKeys = event.getKeys(keyList=['8'])
+        if len(theseKeys) > 0:  # at least one key was pressed
+            key_resp_9.keys = theseKeys[-1]  # just the last key pressed
+            key_resp_9.rt = key_resp_9.clock.getTime()
+            # abort routine on response
+            continueRoutine = False
+    
+    # *text_9* updates
+    if t >= 0.0 and text_9.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_9.tStart = t  # underestimates by a little under one frame
+        text_9.frameNStart = frameN  # exact frame index
+        text_9.setAutoDraw(True)
+    elif text_9.status == STARTED and t >= (0.0 + 2):
+        text_9.setAutoDraw(False)
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in t7Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "t7"-------
+for thisComponent in t7Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+#------Prepare to start Routine"t8"-------
+t = 0
+t8Clock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+key_resp_10 = event.BuilderKeyResponse()  # create an object of type KeyResponse
+key_resp_10.status = NOT_STARTED
+# keep track of which components have finished
+t8Components = []
+t8Components.append(key_resp_10)
+t8Components.append(text_10)
+for thisComponent in t8Components:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "t8"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = t8Clock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_10* updates
+    if t >= 0.0 and key_resp_10.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        key_resp_10.tStart = t  # underestimates by a little under one frame
+        key_resp_10.frameNStart = frameN  # exact frame index
+        key_resp_10.status = STARTED
+        # keyboard checking is just starting
+        key_resp_10.clock.reset()  # now t=0
+        event.clearEvents()
+    if key_resp_10.status == STARTED:  # only update if being drawn
+        theseKeys = event.getKeys(keyList=['9'])
+        if len(theseKeys) > 0:  # at least one key was pressed
+            key_resp_10.keys = theseKeys[-1]  # just the last key pressed
+            key_resp_10.rt = key_resp_10.clock.getTime()
+            # abort routine on response
+            continueRoutine = False
+    
+    # *text_10* updates
+    if t >= 0.0 and text_10.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_10.tStart = t  # underestimates by a little under one frame
+        text_10.frameNStart = frameN  # exact frame index
+        text_10.setAutoDraw(True)
+    elif text_10.status == STARTED and t >= (0.0 + 2):
+        text_10.setAutoDraw(False)
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in t8Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "t8"-------
+for thisComponent in t8Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+#------Prepare to start Routine"t9"-------
+t = 0
+t9Clock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+key_resp_12 = event.BuilderKeyResponse()  # create an object of type KeyResponse
+key_resp_12.status = NOT_STARTED
+# keep track of which components have finished
+t9Components = []
+t9Components.append(key_resp_12)
+t9Components.append(text_11)
+for thisComponent in t9Components:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "t9"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = t9Clock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_12* updates
+    if t >= 0.0 and key_resp_12.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        key_resp_12.tStart = t  # underestimates by a little under one frame
+        key_resp_12.frameNStart = frameN  # exact frame index
+        key_resp_12.status = STARTED
+        # keyboard checking is just starting
+        key_resp_12.clock.reset()  # now t=0
+        event.clearEvents()
+    if key_resp_12.status == STARTED:  # only update if being drawn
+        theseKeys = event.getKeys(keyList=['1'])
+        if len(theseKeys) > 0:  # at least one key was pressed
+            key_resp_12.keys = theseKeys[-1]  # just the last key pressed
+            key_resp_12.rt = key_resp_12.clock.getTime()
+            # abort routine on response
+            continueRoutine = False
+    
+    # *text_11* updates
+    if t >= 0.0 and text_11.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_11.tStart = t  # underestimates by a little under one frame
+        text_11.frameNStart = frameN  # exact frame index
+        text_11.setAutoDraw(True)
+    elif text_11.status == STARTED and t >= (0.0 + 2):
+        text_11.setAutoDraw(False)
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in t9Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "t9"-------
+for thisComponent in t9Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+#------Prepare to start Routine"blank2_2"-------
+t = 0
+blank2_2Clock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+key_resp_11 = event.BuilderKeyResponse()  # create an object of type KeyResponse
+key_resp_11.status = NOT_STARTED
+# keep track of which components have finished
+blank2_2Components = []
+blank2_2Components.append(key_resp_11)
+for thisComponent in blank2_2Components:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "blank2_2"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = blank2_2Clock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_11* updates
+    if t >= 0.0 and key_resp_11.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        key_resp_11.tStart = t  # underestimates by a little under one frame
+        key_resp_11.frameNStart = frameN  # exact frame index
+        key_resp_11.status = STARTED
+        # keyboard checking is just starting
+        key_resp_11.clock.reset()  # now t=0
+        event.clearEvents()
+    if key_resp_11.status == STARTED:  # only update if being drawn
+        theseKeys = event.getKeys(keyList=['0'])
+        if len(theseKeys) > 0:  # at least one key was pressed
+            key_resp_11.keys = theseKeys[-1]  # just the last key pressed
+            key_resp_11.rt = key_resp_11.clock.getTime()
+            # abort routine on response
+            continueRoutine = False
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in blank2_2Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "blank2_2"-------
+for thisComponent in blank2_2Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+#------Prepare to start Routine"t10"-------
+t = 0
+t10Clock.reset()  # clock 
+frameN = -1
+routineTimer.add(2.000000)
+# update component parameters for each repeat
+# keep track of which components have finished
+t10Components = []
+t10Components.append(text_12)
+for thisComponent in t10Components:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "t10"-------
+continueRoutine = True
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = t10Clock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text_12* updates
+    if t >= 0.0 and text_12.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_12.tStart = t  # underestimates by a little under one frame
+        text_12.frameNStart = frameN  # exact frame index
+        text_12.setAutoDraw(True)
+    elif text_12.status == STARTED and t >= (0.0 + 2):
+        text_12.setAutoDraw(False)
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in t10Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "t10"-------
+for thisComponent in t10Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+#------Prepare to start Routine"finish"-------
+t = 0
+finishClock.reset()  # clock 
+frameN = -1
+routineTimer.add(6.000000)
+# update component parameters for each repeat
+# keep track of which components have finished
+finishComponents = []
+finishComponents.append(text_13)
+for thisComponent in finishComponents:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "finish"-------
+continueRoutine = True
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = finishClock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text_13* updates
+    if t >= 0.0 and text_13.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_13.tStart = t  # underestimates by a little under one frame
+        text_13.frameNStart = frameN  # exact frame index
+        text_13.setAutoDraw(True)
+    elif text_13.status == STARTED and t >= (0.0 + 6):
+        text_13.setAutoDraw(False)
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested that we end
+        routineTimer.reset()  # this is the new t0 for non-slip Routines
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in finishComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the [Esc] key)
+    if event.getKeys(["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "finish"-------
+for thisComponent in finishComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+# Shutting down:
+win.close()
+core.quit()
